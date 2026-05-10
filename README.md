@@ -34,7 +34,7 @@ I only use the Python standard library, so there is nothing to install beyond Py
 
 ```bash
 git clone https://github.com/N3haRao/mtb-pattern-finder.git
-cd task
+cd mtb-pattern-finder
 python3 pattern_finder.py
 ```
 
