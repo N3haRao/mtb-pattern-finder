@@ -17,7 +17,6 @@ The result is a detailed, tab-separated output listing every match position, the
 ```
 task/
   pattern_finder.py          # Main analysis script (start here)
-  visualize.py               # generates figures and summary tables
   genome.txt                 # M. tuberculosis H37Rv genome (FASTA)
   annotation.txt             # Genomic feature annotations (GFF3)
   pattern_results.txt        # Full output: every match with region annotations
@@ -25,9 +24,6 @@ task/
   analysis_writeup.md        # My writeup: tricky parts, decisions, and next steps
   task.md                    # The original task description from Dr. DeJesus 
   requirements.txt           # Python dependencies (standard library only)
-  output/
-    figures/                 # 11 visualisation figures (PNG)
-    tables/                  # 6 summary CSV tables
 ```
 
 ---
@@ -45,13 +41,6 @@ python3 pattern_finder.py
 The script reads `genome.txt` and `annotation.txt` from the working directory, prints progress to the console, and writes:
 - `pattern_results.txt` - complete results (~7 MB, one line per match)
 - A summary to the console
-
-To generate visualizations (requires `matplotlib`, `numpy`, `pandas`, `seaborn`):
-
-```bash
-pip install -r requirements.txt
-python3 visualize.py
-```
 
 ---
 
@@ -188,5 +177,3 @@ The core analysis script (`pattern_finder.py`) uses only the Python standard lib
 - `sys` - error handling and exit codes
 - `collections.defaultdict` - grouping results by region
 - `typing` - type annotations for readability
-
-The visualization script (`visualize.py`) additionally requires `matplotlib`, `numpy`, `pandas`, and `seaborn`, listed in `requirements.txt`.
